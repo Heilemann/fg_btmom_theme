@@ -1,2 +1,5 @@
-# fg_btmom_theme
-A Beyond the Mountains of Madness theme for Fantasy Grounds, meant to be used with Call of Cthulhu.
+# Beyond the Mountains of Madness Theme for Fantasy Grounds
+
+I made this to be used with my group. Includes PSDs so you can customize the graphics (e.g. to remove spoilers).
+
+![Fantasy Grounds screenshot showing the theme in use.](/screenshot.png)
