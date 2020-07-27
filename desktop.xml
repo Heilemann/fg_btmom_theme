@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+  <!-- Override CoreRPG ruleset graphics -->
+
+  <!-- Desktop background -->
+  <!-- <framedef name="desktop">
+		<bitmap file="graphics/frames/desktop-wood.png" />
+		<middle rect="0,0,850,850" />
+		<decal rect="850,0,295,295" />
+	</framedef> -->
+
+  <framedef name="desktop">
+		<bitmap file="graphics/frames/desktop-leather.png" />
+		<middle rect="0,0,1753,2048" />
+		<decal rect="1753,0,295,295" />
+	</framedef>
+
+  <framedef name="shortcuts">
+		<bitmap file="graphics/frames/desktop-wood.png" />
+		<left rect="450,0,25,144" />
+		<middle rect="475,0,50,144" />
+		<right rect="525,0,25,144" />
+	</framedef>
+
+
+
+
+
+
+<!-- desktop graphics -->
+  <framedef name="topleft">
+		<bitmap file="graphics/frames/topleft.png" />
+		<topleft rect="0,0,1648,1334" />
+	</framedef>
+  <framedef name="topright">
+		<bitmap file="graphics/frames/topright.png" />
+		<topright rect="0,0,1648,1334" />
+	</framedef>
+  <framedef name="bottomleft">
+		<bitmap file="graphics/frames/bottomleft.png" />
+		<bottomleft rect="0,0,1648,1334" />
+	</framedef>
+  <framedef name="bottomright">
+		<bitmap file="graphics/frames/bottomright.png" />
+		<bottomright rect="0,0,1648,1334" />
+	</framedef>
+
+  <panel name="bottomright">
+    <class>bottomright</class>
+    <bounds>
+      <anchored>
+        <bottom>
+          <!-- <parent>hotkeybox</parent> -->
+          <anchor>bottom</anchor>
+          <offset>-36</offset>
+        </bottom>
+        <right>
+          <parent>shortcuts</parent>
+          <anchor>left</anchor>
+        </right>
+        <size>
+          <width>589</width>
+          <height>662</height>
+        </size>
+      </anchored>
+    </bounds>
+  </panel>
+
+  <windowclass name="topleft">
+    <frame>topleft</frame>
+  </windowclass>
+  <windowclass name="topright">
+    <frame>topright</frame>
+  </windowclass>
+  <windowclass name="bottomleft">
+    <frame>bottomleft</frame>
+  </windowclass>
+  <windowclass name="bottomright">
+    <frame>bottomright</frame>
+  </windowclass>
+
+  <panel name="topright">
+    <class>topright</class>
+    <bounds>
+      <anchored>
+        <top>
+          <!-- <parent>hotkeybox</parent> -->
+          <anchor>top</anchor>
+          <offset>0</offset>
+        </top>
+        <right>
+          <parent>shortcuts</parent>
+          <anchor>left</anchor>
+        </right>
+        <size>
+          <width>454</width>
+          <height>869</height>
+        </size>
+      </anchored>
+    </bounds>
+  </panel>
+
+
+  <panel name="topleft" modes="all">
+    <class>topleft</class>
+    <disabled/>
+    <bounds>0, 0, 405, 748</bounds>
+  </panel>
+
+
+
+
+  <!-- Create a new shadow  -->
+  <framedef name="innershadow">
+		<bitmap file="graphics/frames/desktop-shadow.png" />
+		<offset>256,256,256,256</offset>
+	</framedef>
+
+  <windowclass name="innershadow">
+    <frame>innershadow</frame>
+  </windowclass>
+
+  <panel name="innershadow" modes="all">
+    <class>innershadow</class>
+    <disabled/>
+    <bounds>
+      <anchored>
+        <left offset="0" />
+        <top offset="0" />
+        <right parent="shortcuts" anchor="left" />
+        <bottom offset="-34" />
+      </anchored>
+    </bounds>
+  </panel>
+
+
+  <!-- chat (do not allow unlock and resize) -->
+  <panel name="chat" modes="host, client, local">
+    <class>chat</class>
+    <bounds>5,90,390,-130</bounds>
+    <locked />
+  </panel>
+
+  <panel name="identitylist" modes="host">
+		<class>identitylist</class>
+		<anchored height="20">
+			<left parent="chat" />
+			<top parent="chat" anchor="bottom" offset="2" />
+			<right parent="shortcutsanchor" anchor="left" />
+		</anchored>
+	</panel>
+
+  <panel name="modifierstack" modes="host,client">
+		<class>modifierstack</class>
+		<bounds>5,-100,64,57</bounds>
+		<dynamic />
+		<locked />
+	</panel>
+
+
+  <!-- chatbox -->
+  <panel name="chat" modes="host">
+    <class>chat</class>
+    <anchored height="500">
+			<left parent="modifierstack" anchor="left" />
+			<bottom parent="modifierstack" anchor="top" offset="-20" />
+      <size>
+        <width>390</width>
+      </size>
+		</anchored>
+    <dynamic />
+    <!-- <locked /> -->
+  </panel>
+  <panel name="chat" modes="client">
+    <class>chat</class>
+    <bounds>50,200,390,-110</bounds>
+    <size>
+      <height>400</height>
+    </size>
+    <dynamic />
+    <!-- <locked /> -->
+  </panel>
+  <panel name="chat" modes="local">
+    <class>chatlocal</class>
+    <bounds>50,200,390,-110</bounds>
+    <size>
+      <height>400</height>
+    </size>
+    <dynamic />
+    <!-- <locked /> -->
+  </panel>
+</root>
