@@ -31,11 +31,11 @@
 <!-- desktop graphics -->
   <framedef name="topleft">
 		<bitmap file="graphics/frames/topleft.png" />
-		<topleft rect="0,0,1648,1334" />
+		<topleft rect="0,0,566,1188" />
 	</framedef>
   <framedef name="topright">
 		<bitmap file="graphics/frames/topright.png" />
-		<topright rect="0,0,1648,1334" />
+		<topright rect="0,0,530,872" />
 	</framedef>
   <framedef name="bottomleft">
 		<bitmap file="graphics/frames/bottomleft.png" />
@@ -43,29 +43,8 @@
 	</framedef>
   <framedef name="bottomright">
 		<bitmap file="graphics/frames/bottomright.png" />
-		<bottomright rect="0,0,1648,1334" />
+		<bottomright rect="0,0,1367,1002" />
 	</framedef>
-
-  <panel name="bottomright">
-    <class>bottomright</class>
-    <bounds>
-      <anchored>
-        <bottom>
-          <!-- <parent>hotkeybox</parent> -->
-          <anchor>bottom</anchor>
-          <offset>-36</offset>
-        </bottom>
-        <right>
-          <parent>shortcuts</parent>
-          <anchor>left</anchor>
-        </right>
-        <size>
-          <width>589</width>
-          <height>662</height>
-        </size>
-      </anchored>
-    </bounds>
-  </panel>
 
   <windowclass name="topleft">
     <frame>topleft</frame>
@@ -79,6 +58,12 @@
   <windowclass name="bottomright">
     <frame>bottomright</frame>
   </windowclass>
+
+  <panel name="topleft" modes="all">
+    <class>topleft</class>
+    <disabled/>
+    <bounds>0, 0, 810, 1496</bounds>
+  </panel>
 
   <panel name="topright">
     <class>topright</class>
@@ -94,20 +79,33 @@
           <anchor>left</anchor>
         </right>
         <size>
-          <width>454</width>
-          <height>869</height>
+          <width>908</width>
+          <height>1738</height>
         </size>
       </anchored>
     </bounds>
   </panel>
 
-
-  <panel name="topleft" modes="all">
-    <class>topleft</class>
-    <disabled/>
-    <bounds>0, 0, 405, 748</bounds>
+  <panel name="bottomright">
+    <class>bottomright</class>
+    <bounds>
+      <anchored>
+        <bottom>
+          <!-- <parent>hotkeybox</parent> -->
+          <anchor>bottom</anchor>
+          <offset>-36</offset>
+        </bottom>
+        <right>
+          <parent>shortcuts</parent>
+          <anchor>left</anchor>
+        </right>
+        <size>
+          <width>1178</width>
+          <height>1324</height>
+        </size>
+      </anchored>
+    </bounds>
   </panel>
-
 
 
 
