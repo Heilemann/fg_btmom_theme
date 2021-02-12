@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="ISO-8859-1"?>
 
-
 <root logo="logo.png">
-  <announcement text="Beyond the Mountains of Madness Theme v1.0 beta for Fantasy Grounds, by Michael Heilemann. Tekeli-li!\n" icon="bagend-logo" font="emotefont" />
+  <announcement text="Beyond the Mountains of Madness Theme v1.0 for Fantasy Grounds, by Michael Heilemann.\n" icon="bagend-logo" font="emotefont" />
 
   <properties>
     <name>Theme - Beyond the Mountains of Madness</name>
@@ -10,7 +9,7 @@
     <author>Michael Heilemann</author>
     <description>A simple Beyond the Mountains of Madness flavored theme for Fantasy Grounds.</description>
     <loadorder>99</loadorder>
-  </properties>
+  </properties> 
 
   <base>
     <icon name="bagend-logo" file="graphics/icons/cthulhu-32.png" />
