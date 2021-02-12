@@ -25,22 +25,35 @@
 		<right rect="525,0,25,144" />
 	</framedef>
 
-
-
-  <!-- top left prop layer -->
-  <framedef name="topleft">
-		<bitmap file="graphics/frames/topleft.png" />
-		<topleft rect="0,0,549,1174" />
+  <!-- bottom right layer -->
+  <framedef name="bottomright">
+		<bitmap file="graphics/frames/bottomright.png" />
+		<bottomright rect="0,0,1050,667" />
 	</framedef>
 
-  <windowclass name="topleft">
-    <frame>topleft</frame>
+  <windowclass name="bottomright">
+    <frame>bottomright</frame>
   </windowclass>
 
-  <panel name="topleft" modes="all">
-    <class>topleft</class>
-    <disabled/>
-    <bounds>0, 0, 810, 1496</bounds>
+  <panel name="bottomright">
+    <class>bottomright</class>
+    <bounds>
+      <anchored>
+        <bottom>
+          <!-- <parent>hotkeybox</parent> -->
+          <anchor>bottom</anchor>
+          <offset>-36</offset>
+        </bottom>
+        <right>
+          <parent>shortcuts</parent>
+          <anchor>left</anchor>
+        </right>
+        <size>
+          <width>1178</width>
+          <height>1324</height>
+        </size>
+      </anchored>
+    </bounds>
   </panel>
 
   <!-- top right prop layer -->
@@ -58,10 +71,12 @@
     <bounds>
       <anchored>
         <top>
-          <!-- <parent>hotkeybox</parent> -->
           <anchor>top</anchor>
-          <offset>0</offset>
         </top>
+        <bottom>
+          <anchor>bottom</anchor>
+          <offset>-36</offset>
+        </bottom>
         <right>
           <parent>shortcuts</parent>
           <anchor>left</anchor>
@@ -73,6 +88,45 @@
       </anchored>
     </bounds>
   </panel>
+
+
+  <!-- top left prop layer -->
+  <framedef name="topleft">
+		<bitmap file="graphics/frames/topleft.png" />
+		<topleft rect="0,0,549,1174" />
+	</framedef>
+
+  <windowclass name="topleft">
+    <frame>topleft</frame>
+  </windowclass>
+
+  <panel name="topleft" modes="all">
+    <class>topleft</class>
+    <disabled/>
+    <!-- <bounds>0, 0, 810, 1496</bounds> -->
+    <bounds>
+      <anchored>
+        <top>
+          <!-- <parent>hotkeybox</parent> -->
+          <anchor>top</anchor>
+          <offset>0</offset>
+        </top>
+        <bottom>
+          <!-- <parent>hotkeybox</parent> -->
+          <anchor>bottom</anchor>
+          <offset>-36</offset>
+        </bottom>
+        <left>
+          <anchor>left</anchor>
+        </left>
+        <size>
+          <width>810</width>
+          <height>1496</height>
+        </size>
+      </anchored>
+    </bounds>
+  </panel>
+
 
   <!-- bottom left prop layer -->
   <framedef name="bottomleft">
@@ -104,36 +158,6 @@
     </bounds>
   </panel>
 
-  <!-- bottom right layer -->
-  <framedef name="bottomright">
-		<bitmap file="graphics/frames/bottomright.png" />
-		<bottomright rect="0,0,1050,667" />
-	</framedef>
-
-  <windowclass name="bottomright">
-    <frame>bottomright</frame>
-  </windowclass>
-
-  <panel name="bottomright">
-    <class>bottomright</class>
-    <bounds>
-      <anchored>
-        <bottom>
-          <!-- <parent>hotkeybox</parent> -->
-          <anchor>bottom</anchor>
-          <offset>-36</offset>
-        </bottom>
-        <right>
-          <parent>shortcuts</parent>
-          <anchor>left</anchor>
-        </right>
-        <size>
-          <width>1178</width>
-          <height>1324</height>
-        </size>
-      </anchored>
-    </bounds>
-  </panel>
 
 
 
