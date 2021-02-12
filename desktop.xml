@@ -10,12 +10,14 @@
 		<decal rect="850,0,295,295" />
 	</framedef> -->
 
+  <!-- sidebar -->
   <framedef name="desktop">
 		<bitmap file="graphics/frames/desktop-leather.png" />
 		<middle rect="0,0,1753,2048" />
 		<decal rect="1753,0,295,295" />
 	</framedef>
 
+  <!-- shortcuts sidebar -->
   <framedef name="shortcuts">
 		<bitmap file="graphics/frames/desktop-wood.png" />
 		<left rect="450,0,25,144" />
@@ -25,38 +27,14 @@
 
 
 
-
-
-
-<!-- desktop graphics -->
+  <!-- top left prop layer -->
   <framedef name="topleft">
 		<bitmap file="graphics/frames/topleft.png" />
-		<topleft rect="0,0,566,1188" />
-	</framedef>
-  <framedef name="topright">
-		<bitmap file="graphics/frames/topright.png" />
-		<topright rect="0,0,530,872" />
-	</framedef>
-  <framedef name="bottomleft">
-		<bitmap file="graphics/frames/bottomleft.png" />
-		<bottomleft rect="0,0,1648,1334" />
-	</framedef>
-  <framedef name="bottomright">
-		<bitmap file="graphics/frames/bottomright.png" />
-		<bottomright rect="0,0,1367,1002" />
+		<topleft rect="0,0,549,1174" />
 	</framedef>
 
   <windowclass name="topleft">
     <frame>topleft</frame>
-  </windowclass>
-  <windowclass name="topright">
-    <frame>topright</frame>
-  </windowclass>
-  <windowclass name="bottomleft">
-    <frame>bottomleft</frame>
-  </windowclass>
-  <windowclass name="bottomright">
-    <frame>bottomright</frame>
   </windowclass>
 
   <panel name="topleft" modes="all">
@@ -64,6 +42,16 @@
     <disabled/>
     <bounds>0, 0, 810, 1496</bounds>
   </panel>
+
+  <!-- top right prop layer -->
+  <framedef name="topright">
+		<bitmap file="graphics/frames/topright.png" />
+		<topright rect="0,0,836,1025" />
+	</framedef>
+
+  <windowclass name="topright">
+    <frame>topright</frame>
+  </windowclass>
 
   <panel name="topright">
     <class>topright</class>
@@ -85,6 +73,46 @@
       </anchored>
     </bounds>
   </panel>
+
+  <!-- bottom left prop layer -->
+  <framedef name="bottomleft">
+		<bitmap file="graphics/frames/bottomleft.png" />
+		<bottomleft rect="0,0,696,560" />
+	</framedef>
+
+  <windowclass name="bottomleft">
+    <frame>bottomleft</frame>
+  </windowclass>
+
+  <panel name="bottomleft">
+    <class>bottomleft</class>
+    <bounds>
+      <anchored>
+        <bottom>
+          <!-- <parent>hotkeybox</parent> -->
+          <anchor>bottom</anchor>
+          <offset>-36</offset>
+        </bottom>
+        <left>
+          <anchor>left</anchor>
+        </left>
+        <size>
+          <width>696</width>
+          <height>560</height>
+        </size>
+      </anchored>
+    </bounds>
+  </panel>
+
+  <!-- bottom right layer -->
+  <framedef name="bottomright">
+		<bitmap file="graphics/frames/bottomright.png" />
+		<bottomright rect="0,0,1050,667" />
+	</framedef>
+
+  <windowclass name="bottomright">
+    <frame>bottomright</frame>
+  </windowclass>
 
   <panel name="bottomright">
     <class>bottomright</class>
